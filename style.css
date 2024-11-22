@@ -1,94 +1,142 @@
 /* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* Main container styling */
+.container {
+  background: #fff;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+/* Logo Styling */
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form and section styling */
+h2, h3 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4facfe;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.7);
+}
+
+button {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.signup-link {
+  margin-top: 10px;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.signup-link a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Weather information section */
+.weather-info {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.weather-info h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#weather-output {
+  background: #f7f9fc;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
   }
-  
-  /* Logo container styling */
-  .logo-container {
-    margin-bottom: 20px; /* Adds spacing between the logo and the login form */
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  .logo-container img {
-    width: 100px; /* Adjust size of the logo */
-    height: 90px; /* Maintain aspect ratio */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Login container styling */
-  .login-container {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  input:focus {
-    outline: none;
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  .login-btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .login-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .signup-link {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .signup-link a {
-    color: #007BFF;
-    text-decoration: none;
-  }
-  
-  .signup-link a:hover {
-    text-decoration: underline;
-  }
-  
+}
